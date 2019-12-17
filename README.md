@@ -1,5 +1,5 @@
 # chat-space DB設計
-## membersテーブル
+## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |email|string|null: false|
@@ -17,14 +17,8 @@
 ### Association
 - has_many :members
 - has_many :comments
-
-## usersテーブル
-|Column|Type|Options|
-|------|----|-------|
-|text|text|null: false|
-### Association
-- has_many :groups
-- has_many  :groups,  through:  :groups_users
+- has_many :groups_tags
+- has_many  :users,  through:  :groups_tags
 
 ## groups_usersテーブル
 |Column|Type|Options|
@@ -44,4 +38,4 @@
 |group_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :group
-- belongs_to :member
+- belongs_to :user
