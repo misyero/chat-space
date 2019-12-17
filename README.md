@@ -12,7 +12,7 @@
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|title|strin|null: false|
+|title|string|null: false|
 |user_id|integer|foreign_key: true|
 ### Association
 - has_many :members
