@@ -14,7 +14,6 @@
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-||integer|foreign_key: true|
 ### Association
 - has_many :comments
 - has_many :groups_users
