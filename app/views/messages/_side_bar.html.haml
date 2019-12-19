@@ -1,0 +1,69 @@
+.body
+  .chat-space
+    .side-bar
+      .side-bar__user-name
+        .top-items
+          .top-items__names
+            masa
+
+          .top-items__icons
+            = link_to "#", class: "top-items__btn" do
+              = icon('fas', 'edit', class: "top-items__btn--icon")
+              %span<>
+            = link_to "#", class: "top-items__btn" do
+              = icon('fas', 'cog', class: "top-items__btn--icon")
+              %span<>
+
+      .side-bar__group-list
+        .group-items
+          .group-items__names
+            techcamp
+          .group-items__messages
+            まだメッセージがありません
+
+    .chat-main
+      .chat-main__group-info
+        .chat-items
+          .chat-items__left-contents
+            .chat-items__left-contents--group-name
+              test
+
+            .chat-items__left-contents--group-member-name
+              Member:masa
+
+          .chat-items__right-contents
+            .chat-items__right-contents--group-edit
+              = link_to '#' do
+                edit
+
+      .chat-main__message-list
+        .message-items
+          .message-items__first-talk
+            .message-items__first-talk--name
+              masa
+            .message-items__first-talk--date
+              2019/11/20(Wed) 17:43:01    
+          .message-items__second-talk
+            おはよう！
+
+          .message-items__third-talk
+            .message-items__third-talk--name
+              masa
+            .message-items__third-talk--date  
+              2019/11/20(Wed) 17:43:34
+          .message-items__forth-talk
+            今日は夜から雨
+
+      .chat-main__massage-form
+        .talk-items
+          .talk-items__solid
+            .talk-items__message
+              %input{type: "text",placeholder: "type a message"}
+            .talk-items__image
+              %label{class: "input-box__image"}
+                = icon('fas', 'image')
+                .talk-items__image--input
+                  %input{type: "file"}
+          .talk-items__edit
+            = link_to '#' do
+              send
