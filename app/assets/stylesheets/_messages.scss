@@ -1,0 +1,189 @@
+* {
+  box-sizing: border-box;
+}
+
+.chat-space {
+  display: flex;
+
+  .side-bar {
+    background-color: #2f3e51;
+    height: 100vh;
+    width: 300px;
+    color: #ffffff;
+    font-weight: bold;
+
+    &__user-name {
+      height: 100px;
+      background-color: #253141;
+    }
+
+    .top-items{
+      line-height: 100px;
+      display: flex;
+      justify-content: space-between;
+      padding: 0px 20px;
+
+      &__names {
+        font-size: 16px;
+      }
+
+      &__btn--icon{
+        color: #ffffff;
+        padding-left: 5px;
+      }
+    }
+
+    .group-items{
+      padding: 0px 20px;
+
+      &__names{
+        font-size: 15px;
+        padding: 20px 0px 5px;
+      }
+
+      &__messages{
+        font-size: 11px;
+        padding-bottom: 40px;
+      }
+
+    }
+  }
+
+  .chat-main {
+    background-color: #ffffff;
+    height: 100vh;
+    width: calc(100vw - 300px);
+    float: right;
+
+    &__group-info{
+      height: 99px;
+      background-color: #ffffff;
+      border-bottom: 1px solid #eeeeee;
+    }
+    &__message-list{
+      height: calc(100vh - 190px);
+      background-color: #fafafa;
+    }
+
+    .chat-items{
+      display: flex;
+      justify-content: space-between;
+
+      &__left-contents--group-name{
+        color: #333333;
+        font-size: 20px;
+        padding: 35px 0px 15px 40px;
+      }
+
+      &__left-contents--group-member-name{
+        color: #999999;
+        font-size: 12px;
+        padding-left: 40px;
+      }
+
+      &__right-contents--group-edit a{
+        display: flex;
+        text-align: right;
+        color: #38aef0;
+        font-size: 16px;
+        text-decoration: none;
+        border: 2px solid #38aef0;
+        height: 40px;
+        width: 72px;
+        padding: 0px 20px;
+        margin: 28px 60px 0px 0px;
+        line-height: 40px;
+      }
+    }
+
+    .chat-main__message-list{
+      padding-left: 40px;
+    }
+    .message-items{
+      &__first-talk{
+        display: flex;
+        padding: 35px 0px 12px;
+        
+        &--name{
+          font-size: 16px;
+          color: #333333;
+        }
+        
+        &--date{
+          font-size: 12px;
+          color: #999999;
+        }
+      }
+      &__second-talk{
+        font-size: 14px;
+        color: #434A54;
+        padding-bottom: 46px;
+      }
+
+      &__third-talk{
+        display: flex;
+        padding: 35px 0px 12px;
+        
+        &--name{
+          font-size: 16px;
+          color: #333333;
+        }
+        
+        &--date{
+          font-size: 12px;
+          color: #999999;
+        }
+      }
+    }
+    .talk-items{
+      display: flex;
+      height: 90px;
+      background-color: #d2d2d2;
+      margin: 0 auto;
+      &__solid{
+        position: relative;
+        line-height: 50px;
+        margin: auto 15px auto 40px;
+      }
+
+      &__message{
+        position: absolute;
+        left: 20px;
+        bottom: -30px;
+      }
+
+      &__image{
+        position: absolute;
+        left: 840px;
+        bottom: -30px;
+        &--input{
+          display: none;
+        }
+      }
+
+      input[type="text"] {
+        width: 850px;
+        line-height: 50px;
+      }
+      .input-box__image{
+        padding-right: 10px;
+      }
+
+      &__edit a{
+        display: flex;
+        position: absolute;
+        color: #ffffff;
+        font-size: 16px;
+        text-decoration: none;
+        background-color: #38aef0;
+        height: 50px;
+        width: 75px;
+        padding: 0px 20px;
+        margin: 22px 40px 0px 0px;
+        line-height: 50px;
+        left: 1250px;
+      }
+    }
+  }
+}
+
