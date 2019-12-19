@@ -59,11 +59,10 @@
           .talk-items__solid
             .talk-items__message
               %input{type: "text",placeholder: "type a message"}
-            .talk-items__image
-              %label{class: "input-box__image"}
-                = icon('fas', 'image')
-                .talk-items__image--input
-                  %input{type: "file"}
+                %label{class: "input-box__image"}
+                  = icon('fas', 'image')
+                  .talk-items__image--input
+                    %input{type: "file"}
           .talk-items__edit
             = link_to '#' do
               send
