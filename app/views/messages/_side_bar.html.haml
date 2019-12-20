@@ -4,13 +4,13 @@
       .side-bar__user-name
         .top-items
           .top-items__names
-            masa
+            = current_user.name
 
           .top-items__icons
             = link_to "#", class: "top-items__btn" do
               = icon('fas', 'edit', class: "top-items__btn--icon")
               %span<>
-            = link_to "#", class: "top-items__btn" do
+            = link_to edit_user_path(current_user) do
               = icon('fas', 'cog', class: "top-items__btn--icon")
               %span<>
 
