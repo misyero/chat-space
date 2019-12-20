@@ -7,7 +7,7 @@
             = current_user.name
 
           .top-items__icons
-            = link_to "#", class: "top-items__btn" do
+            = link_to "groups/new", class: "top-items__btn" do
               = icon('fas', 'edit', class: "top-items__btn--icon")
               %span<>
             = link_to edit_user_path(current_user) do
@@ -16,12 +16,15 @@
 
       .side-bar__group-list
         .group-items
-          .group-items__names
-            techcamp
-          .group-items__messages
-            まだメッセージがありません
+          - current_user.groups.each do |group|
+            .group--items__link
+              = link_to '#',class: "link" do
+                .group-items__names
+                  = group.name
+                .group-items__messages
+                  メッセージはまだありません。
 
-    .chat-main
+    .chat-main 
       .chat-main__group-info
         .chat-items
           .chat-items__left-contents
