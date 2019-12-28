@@ -18,26 +18,27 @@
         .group-items
           - current_user.groups.each do |group|
             .group--items__link
-              = link_to '#',class: "link" do
+              = link_to group_messages_path(group) do
                 .group-items__names
                   = group.name
                 .group-items__messages
-                  メッセージはまだありません。
+                  = group.show_last_message
 
     .chat-main 
       .chat-main__group-info
         .chat-items
-          .chat-items__left-contents
-            .chat-items__left-contents--group-name
-              test
+          - current_user.groups.each do |group|
+            .chat-items__left-contents
+              .chat-items__left-contents--group-name
+                = group.name
 
-            .chat-items__left-contents--group-member-name
-              Member:masa
+              .chat-items__left-contents--group-member-name
+                = group.users.name
 
-          .chat-items__right-contents
-            .chat-items__right-contents--group-edit
-              = link_to '#' do
-                edit
+            .chat-items__right-contents
+              .chat-items__right-contents--group-edit
+                = link_to edit_group_path(group) do
+                  edit
 
       .chat-main__message-list
         .message-items
