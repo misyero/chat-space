@@ -3,7 +3,7 @@ $(function(){
    if ( message.image ) {
      var html =
       `<div class="message-items">
-<div class="message-items__first-talk">
+        <div class="message-items__first-talk">
           <div class="message-items__first-talk--name">
             ${message.user_name}
           </div>
@@ -67,3 +67,4 @@ $('#new_message').on('submit', function(e){
   });
 })
 });
+
