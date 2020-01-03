@@ -6,7 +6,9 @@
           = @group.name
 
         .chat-items__left-contents--group-member-name
-          = @group.users.name
+          User:
+          - @group.users.each do |user|
+            = user.name              
 
       .chat-items__right-contents
         .chat-items__right-contents--group-edit
