@@ -2,8 +2,7 @@ $(function(){
   function buildHTML(message){
    if ( message.image ) {
      var html =
-      `<div class="message-items">
-        <div class="message-items__first-talk">
+      `<div class="message-items__first-talk">
           <div class="message-items__first-talk--name">
             ${message.user_name}
           </div>
@@ -71,7 +70,6 @@ $(function(){
       //data-idが反映されるようにしている
       var html =
       `<div class="chat-view" data-message-id=` + message.id + `>` +
-        `<div class="message-items">` +
           `<div class="message-items__first-talk">` +
             `<div class="message-items__first-talk--name">` +
               message.user_name +
@@ -92,7 +90,6 @@ $(function(){
       //同様に、data-idが反映されるようにしている
       var html = 
       `<div class="chat-view" data-message-id=` + message.id + `>` +
-        `<div class="message-items">` +
           `<div class="message-items__first-talk">` +
             `<div class="message-items__first-talk--name">` +
               message.user_name +
