@@ -1,4 +1,6 @@
 $(function(){ 
+  last_message_id = $('.chat-view:last').data("message-id");
+  console.log(last_message_id);
   function buildHTML(message){
    if ( message.image ) {
      var html =
@@ -70,6 +72,7 @@ $(function(){
       //data-idが反映されるようにしている
       var html =
       `<div class="chat-view" data-message-id=` + message.id + `>` +
+        `<div class="message-items">` +
           `<div class="message-items__first-talk">` +
             `<div class="message-items__first-talk--name">` +
               message.user_name +
@@ -90,6 +93,7 @@ $(function(){
       //同様に、data-idが反映されるようにしている
       var html = 
       `<div class="chat-view" data-message-id=` + message.id + `>` +
+        `<div class="message-items">` +
           `<div class="message-items__first-talk">` +
             `<div class="message-items__first-talk--name">` +
               message.user_name +
@@ -151,5 +155,8 @@ $(function(){
         console.log('error');
       });
   };
+  if (document.location.href.match(/\/groups\/\d+\/messages/)) {
+    setInterval(reloadMessages, 7000);
+  }
 });
 
